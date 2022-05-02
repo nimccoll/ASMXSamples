@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">ASMX Web Service Client</h1>
+    <p>@Html.ActionLink("Call ASMX Web Service", "CallWebService", "Home", new {}, new { @class = "btn btn-primary" })</p>
+    @if (!string.IsNullOrEmpty(ViewBag.WebServiceResponse))
+    {
+        <p>ASMX Web Service Response: @ViewBag.WebServiceResponse</p>
+    }
+</div>
